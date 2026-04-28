@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="index.css">
 <head>
-    <link rel="icon" href="images.js/paradox-logo.jpg" type="image/svg+xml">
+    <link rel="icon" href="images/paradox-logo.jpg" type="image/svg+xml">
     <title>Hearts of Iron 4 WIKI</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <header>
-        <div class="nav-wrapper">
-            <div class="nav-left">
-                <img src="images.js/icons8-menu-50.png" alt="menu">
-                <span>Hearts of Iron WIKI</span>
-            </div>
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>About </li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
+
+<header>
+    <div class="nav-wrapper">
+        <div class="nav-left">
+            <img src="images/icons8-menu-50.png" alt="menu">
+            <span>Hearts of Iron WIKI</span>
         </div>
-    </header>
-            <div class="banner">
-                <div class="banner container">
-                    <div class="banner.text"></div>
-                </div>
-        
-        <div>
-            <img src="images.js/hoi4-logo.png" alt="menu button" id="menuimg">
-        </div>
-    <a class="box army" href="icons8-menu-50.png">Box 11</a>
-        <div class="box2"><img src="icons8-menu-50.png" alt="box2 image"></div>
-        <div class="box3"><img src="icons8-menu-50.png" alt="box3 image"></div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a> </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-        
-</div>
+</header>
+
+<main class="layout">
+
+    <!--Sidebar-->
+    <aside class="sidebar">
+        <div class="side-box large"><img src="images/hoi4-logo.png" alt="menu"></div>
+        <div class="side-box small"></div>
+    </aside>
+
+    <!--Main content-->
+    <section class="content">
+        <div class="grid">
+
+            <div class="card top-left"></div>
+            <div class="card top-right"></div>
+
+            <div class="card center"></div>
+
+            <div class="card bottom-left"></div>
+            <div class="card bottom-right"></div>
+
+        </div>
+
+    </section>
+</main>
+
 </body>
 </html>
