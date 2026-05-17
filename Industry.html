@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/paradox-logo.jpg" type="image/svg+xml">
+    <title>Hearts of Iron 4 WIKI - Army</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main global stylesheet -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Page-specific stylesheet -->
+    <link rel="stylesheet" href="industry.css">
+</head>
+
+<body>
+
+<header>
+    <div class="nav-wrapper">
+        <div class="nav-left">
+            <div class="menu-wrapper" id="menuWrapper">
+                <img src="images/icons8-menu-50.png" alt="menu" class="menu-button" id="menuButton">
+
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="index.html">Home</a>
+                    <a href="army.html">Army</a>
+                    <a href="Airforce.html">Airforce</a>
+                    <a href="navy.html">Navy</a>
+                    <a href="Political.html">Political</a>
+                    <a href="Industry.html">Industry</a>
+                </div>
+            </div>
+            <span>Hearts of Iron WIKI</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="layout">
+
+    <!--Sidebar-->
+    <aside class="sidebar">
+        <div class="side-box logo-box">
+            <img src="images/hoi4-logo.png" alt="HOI4 logo">
+            <p class="logo-text">Hearts of Iron IV WIKI</p>
+            <a>Hearts of Iron IV is a grand strategy wargame that focuses on World War II. The player can control any country in the world, starting either in 1936 or 1939.</a>
+        </div>
+
+    </aside>
+
+    <section class="content">
+    <h1 class="page-title">Industry</h1>
+
+    <div class="page-content">
+        <p>Welcome to the Industry section of the HOI4 Wiki.</p>
+
+        <div class="Industry-boxes">
+            <button class="Industry-box" onclick="openPopup('Factories produce equipment, supplies, and consumer goods.')">
+                Factories
+            </button>
+
+            <button class="Industry-box" onclick="openPopup('Resources like oil, steel, and aluminum power your war machine.')">
+                Resources
+            </button>
+
+            <button class="Industry-box" onclick="openPopup('Production lines determine how efficiently equipment is manufactured.')">
+                Production Lines
+            </button>
+        </div>
+
+        <div id="popup-overlay" class="popup-overlay" onclick="closePopup()"></div>
+
+        <div id="popup-box" class="popup-box">
+            <p id="popup-text"></p>
+            <button class="popup-close" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+    </section>
+
+</main>
+<script>
+const menuBtn = document.getElementById("menuButton");
+const menu = document.getElementById("dropdownMenu");
+const wrapper = document.getElementById("menuWrapper");
+
+menuBtn.addEventListener("click", function(event) {
+    event.stopPropagation();
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+});
+
+document.addEventListener("click", function(event) {
+    if (!wrapper.contains(event.target)) {
+        menu.style.display = "none";
+    }
+});
+</script>
+
+
+<script>
+function openPopup(text) {
+    document.getElementById("popup-text").innerText = text;
+    document.getElementById("popup-overlay").style.display = "block";
+    document.getElementById("popup-box").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("popup-overlay").style.display = "none";
+    document.getElementById("popup-box").style.display = "none";
+}
+</script>
+</body>
+</html>

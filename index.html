@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/paradox-logo.jpg" type="image/svg+xml">
+    <title>Hearts of Iron 4 WIKI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<header>
+    <div class="nav-wrapper">
+        <div class="nav-left">
+            <div class="menu-wrapper" id="menuWrapper">
+                <img src="images/icons8-menu-50.png" alt="menu" class="menu-button" id="menuButton">
+
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="index.html">Home</a>
+                    <a href="army.html">Army</a>
+                    <a href="Airforce.html">Airforce</a>
+                    <a href="navy.html">Navy</a>
+                    <a href="Political.html">Political</a>
+                    <a href="Industry.html">Industry</a>
+                </div>
+            </div>
+            <span>Hearts of Iron WIKI</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="layout">
+
+    <!--Sidebar-->
+    <aside class="sidebar">
+        <div class="side-box logo-box">
+            <img src="images/hoi4-logo.png" alt="HOI4 logo">
+            <p class="logo-text">Hearts of Iron IV WIKI</p>
+            <a>Hearts of Iron IV is a grand strategy wargame that focuses on World War II. The player can control any country in the world, starting either in 1936 or 1939.</a>
+        </div>
+
+    </aside>
+
+    <!--Main content-->
+    <section class="content">
+        <div class="grid">
+            
+            <a class="card top-left" href="army.html" aria-label="Go to Army page"><img src="images/army-hoi4.jpg" alt="Army"></a>
+            <a class="card top-right" href="navy.html" aria-label="Go to Navy page"><img src="images/battleship-hoi4.jpg" alt="Navy"></a>
+
+            <a class="card center" href="Political.html" aria-label="Go to Political page"><img src="images/Political-hoi4.webp" alt="Political"></a>
+
+            <a class="card bottom-left" href="Airforce.html" aria-label="Go to Air Force page"><img src="images/air-hoi4.png" alt="Airforce"></a>
+            <a class="card bottom-right" href="Industry.html" aria-label="Go to Industry page"><img src="images/industry.png" alt="Industrial"></a>
+
+        </div>
+    </section>
+</main>
+<footer id="Contact" class="footer">
+    <p>Contact: oscar.cederholm1@skola.taby.se</p>
+    <p>Made by Oscar Cederholm • 2026</p>
+</footer>
+<script>
+const menuBtn = document.getElementById("menuButton");
+const menu = document.getElementById("dropdownMenu");
+const wrapper = document.getElementById("menuWrapper");
+
+menuBtn.addEventListener("click", function(event) {
+    event.stopPropagation();
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+});
+
+document.addEventListener("click", function(event) {
+    if (!wrapper.contains(event.target)) {
+        menu.style.display = "none";
+    }
+});
+</script>
+
+
+<script>
+function openPopup(text) {
+    document.getElementById("popup-text").innerText = text;
+    document.getElementById("popup-overlay").style.display = "block";
+    document.getElementById("popup-box").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("popup-overlay").style.display = "none";
+    document.getElementById("popup-box").style.display = "none";
+}
+</script>
+</body>
+</html>
