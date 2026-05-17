@@ -5,6 +5,9 @@
     <title>Hearts of Iron 4 WIKI - Army</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
 
     <!-- Main global stylesheet -->
     <link rel="stylesheet" href="index.css">
@@ -91,12 +94,12 @@ const wrapper = document.getElementById("menuWrapper");
 
 menuBtn.addEventListener("click", function(event) {
     event.stopPropagation();
-    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    menu.classList.toggle("active");
 });
 
 document.addEventListener("click", function(event) {
     if (!wrapper.contains(event.target)) {
-        menu.style.display = "none";
+        menu.classList.remove("active");
     }
 });
 </script>

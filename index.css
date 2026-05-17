@@ -3,6 +3,9 @@
 *::after {
   box-sizing: border-box;
 }
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+}
 
 body {
   margin: 0;
@@ -257,12 +260,19 @@ nav a {
   background: #5a1a1a;
   border-radius: 8px;
   padding: 10px 0;
-  display: none;
-  flex-direction: column;
   min-width: 160px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
-  z-index: 9500;
-  transform: translateX(-10px);
+  box-shadow: 0 0 12px rgba(0,0,0,0,6);
+  z-index: 99999;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-5px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.dropdown-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 .dropdown-menu a {

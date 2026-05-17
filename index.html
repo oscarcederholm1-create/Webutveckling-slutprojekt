@@ -5,7 +5,12 @@
     <title>Hearts of Iron 4 WIKI</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Main global stylesheet -->
     <link rel="stylesheet" href="index.css">
+
 </head>
 
 <body>
@@ -52,7 +57,7 @@
     <!--Main content-->
     <section class="content">
         <div class="grid">
-            
+
             <a class="card top-left" href="army.html" aria-label="Go to Army page"><img src="images/army-hoi4.jpg" alt="Army"></a>
             <a class="card top-right" href="navy.html" aria-label="Go to Navy page"><img src="images/battleship-hoi4.jpg" alt="Navy"></a>
 
@@ -75,15 +80,16 @@ const wrapper = document.getElementById("menuWrapper");
 
 menuBtn.addEventListener("click", function(event) {
     event.stopPropagation();
-    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    menu.classList.toggle("active");
 });
 
 document.addEventListener("click", function(event) {
     if (!wrapper.contains(event.target)) {
-        menu.style.display = "none";
+        menu.classList.remove("active");
     }
 });
 </script>
+
 
 
 <script>
