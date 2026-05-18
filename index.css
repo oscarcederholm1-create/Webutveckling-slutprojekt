@@ -131,6 +131,37 @@ nav a {
   color: white;
 }
 
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(0,0,0,0.4);
+    color: white;
+}
+
+.info-table th {
+    background: #a43131;
+    padding: 10px;
+    text-align: left;
+}
+
+.info-table td {
+    padding: 10px;
+}
+
+.info-table tbody tr:nth-child(odd) {
+    background: rgba(255,255,255,0.1);
+}
+
+.info-table tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.2);
+}
+
+.info-table tfoot tr {
+    background: black;
+    font-weight: bold;
+}
+
 /* --------Main Content-------- */
 .content {
   flex: 1;
